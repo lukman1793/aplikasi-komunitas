@@ -9,13 +9,14 @@ package Halaman_Utama;
  *
  * @author lukman
  */
-public class commnity_of_bikers extends javax.swing.JFrame {
-
+public class Menu_Utama extends javax.swing.JFrame {
+    
     /**
      * Creates new form commnity_of_bikers
      */
-    public commnity_of_bikers() {
+    public Menu_Utama() {
         initComponents();
+//        p_main.removeAll();
     }
 
     /**
@@ -29,40 +30,69 @@ public class commnity_of_bikers extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jButton5 = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        data_Anggota1 = new Halaman_Menu.Data_Anggota();
+        b_login = new javax.swing.JButton();
+        b_data_anggota = new javax.swing.JButton();
+        b_jadwal_event = new javax.swing.JButton();
+        b_pembuatan_event = new javax.swing.JButton();
+        b_logout = new javax.swing.JButton();
+        b_pendaftaran_event = new javax.swing.JButton();
+        b_pembuatan_event1 = new javax.swing.JButton();
+        p_main = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Bikers Komunity");
+        setResizable(false);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton1.setText("Login");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        b_login.setText("Login");
+        b_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                b_loginActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Data Anggota");
+        b_data_anggota.setText("Data Anggota");
+        b_data_anggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_data_anggotaActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Jadwal Event");
+        b_jadwal_event.setText("Jadwal Event");
+        b_jadwal_event.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_jadwal_eventActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("Pendaftaran Event");
+        b_pembuatan_event.setText("Pembuatan Event");
+        b_pembuatan_event.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_pembuatan_eventActionPerformed(evt);
+            }
+        });
 
-        jToggleButton1.setText("Pembayaran Event");
+        b_logout.setText("Logout");
 
-        jButton5.setText("Logout");
+        b_pendaftaran_event.setText("Pendaftaran Event");
+        b_pendaftaran_event.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_pendaftaran_eventActionPerformed(evt);
+            }
+        });
+
+        b_pembuatan_event1.setText("Manajemen User");
+        b_pembuatan_event1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_pembuatan_event1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -71,35 +101,37 @@ public class commnity_of_bikers extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(b_login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b_data_anggota, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b_jadwal_event, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b_pembuatan_event, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b_logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b_pendaftaran_event, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b_pembuatan_event1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jButton1)
+                .addComponent(b_login)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(b_data_anggota)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(b_jadwal_event)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(b_pendaftaran_event)
                 .addGap(18, 18, 18)
-                .addComponent(jToggleButton1)
+                .addComponent(b_pembuatan_event)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(b_pembuatan_event1)
+                .addGap(18, 18, 18)
+                .addComponent(b_logout)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel3.add(data_Anggota1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 460));
+        p_main.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_main.setLayout(new java.awt.CardLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -131,15 +163,13 @@ public class commnity_of_bikers extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(p_main, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,12 +177,10 @@ public class commnity_of_bikers extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel1)))
+                    .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE)
+                    .addComponent(p_main, javax.swing.GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -177,9 +205,37 @@ public class commnity_of_bikers extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void b_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_loginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_b_loginActionPerformed
+
+    private void b_data_anggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_data_anggotaActionPerformed
+        p_main.removeAll();
+        p_main.add(new Halaman_Menu.data_anggota());
+        p_main.revalidate();
+    }//GEN-LAST:event_b_data_anggotaActionPerformed
+
+    private void b_jadwal_eventActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_jadwal_eventActionPerformed
+        p_main.removeAll();
+        p_main.add(new Halaman_Menu.jadwal_event());
+        p_main.revalidate();
+    }//GEN-LAST:event_b_jadwal_eventActionPerformed
+
+    private void b_pendaftaran_eventActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_pendaftaran_eventActionPerformed
+        //
+    }//GEN-LAST:event_b_pendaftaran_eventActionPerformed
+
+    private void b_pembuatan_eventActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_pembuatan_eventActionPerformed
+        p_main.removeAll();
+        p_main.add(new Halaman_Menu.pembuatan_event());
+        p_main.revalidate();
+    }//GEN-LAST:event_b_pembuatan_eventActionPerformed
+
+    private void b_pembuatan_event1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_pembuatan_event1ActionPerformed
+        p_main.removeAll();
+        p_main.add(new Halaman_Menu.manajemen_user());
+        p_main.revalidate();
+    }//GEN-LAST:event_b_pembuatan_event1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,37 +254,39 @@ public class commnity_of_bikers extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(commnity_of_bikers.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_Utama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(commnity_of_bikers.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_Utama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(commnity_of_bikers.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_Utama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(commnity_of_bikers.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_Utama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new commnity_of_bikers().setVisible(true);
+                new Menu_Utama().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Halaman_Menu.Data_Anggota data_Anggota1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton b_data_anggota;
+    private javax.swing.JButton b_jadwal_event;
+    private javax.swing.JButton b_login;
+    private javax.swing.JButton b_logout;
+    private javax.swing.JButton b_pembuatan_event;
+    private javax.swing.JButton b_pembuatan_event1;
+    private javax.swing.JButton b_pendaftaran_event;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JPanel p_main;
     // End of variables declaration//GEN-END:variables
+
 }
